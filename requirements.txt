@@ -1,0 +1,10 @@
+flask
+flask-wtf
+wtforms
+pandas
+openpyxl
+rdkit-pypi
+openbabel-wheel
+gunicorn
+
+

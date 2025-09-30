@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OncoligandDB - Solid Cancer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="OncoligandDB Logo" class="logo">
+        <h1>Solid Cancers</h1>
+    </header>
+    <main>
+        <h2>Choose your interest: Select your cancer type</h2>
+        <div class="cancer-types">
+            <a href="/cancer_type/pancreas">
+                <img src="{{ url_for('static', filename='logos/pancreas_cancer.jpg') }}" alt="Pancreas Cancer">
+                <span>Pancreas Cancer</span>
+            </a>
+            <a href="/cancer_type/breast">
+                <img src="{{ url_for('static', filename='logos/breast_cancer.png') }}" alt="Breast Cancer">
+                <span>Breast Cancer</span>
+            </a>
+            <a href="/cancer_type/hepatitis">
+                <img src="{{ url_for('static', filename='logos/hepathit_cancer.jpg') }}" alt="Hepatitis Cancer">
+                <span>Hepatitis Cancer</span>
+            </a>
+            <a href="/cancer_type/renal">
+                <img src="{{ url_for('static', filename='logos/renal_cancer.png') }}" alt="Renal Cancer">
+                <span>Renal Cancer</span>
+            </a>
+            <a href="/cancer_type/lung">
+                <img src="{{ url_for('static', filename='logos/lung_cancer.jpg') }}" alt="Lung Cancer">
+                <span>Lung Cancer</span>
+    </main>
+    <footer>
+        <p>Contact us: contact@oncoliganddb.com</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#ligandsTable').DataTable();
+        });
+    </script>
+</body>
+</html>
+

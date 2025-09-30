@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OncoligandDB - {{ cancer_type }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="OncoligandDB Logo" class="logo">
+    </header>
+    <main>
+        <h2>{{ cancer_type }} Ligands</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ligand Name</th>
+                    <th>SMILES</th>
+                    <th>PDB Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ligand in data %}
+                <tr>
+                    <td>{{ ligand.Product }}</td>
+                    <td>{{ ligand.SMILES }}</td>
+                    <td><a href="{{ ligand.pdb_link }}">Download PDB</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
+

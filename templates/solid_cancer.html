@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OncoligandDB - Solid Cancers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="OncoligandDB Logo" class="logo">
+        <h1>Solid Cancers</h1>
+    </header>
+
+    <main>
+        <h2>Select a cancer type</h2>
+        <div class="cancer-types">
+
+            <a href="/cancer_type/breast">
+                <img src="{{ url_for('static', filename='logos/breast_cancer.png') }}" alt="Breast Cancer">
+                <span>Breast Cancer</span>
+            </a>
+            <a href="/cancer_type/cervical">
+                <img src="{{ url_for('static', filename='logos/cervical.jpg') }}" alt="Cervical Cancer">
+                <span>Cervical Cancer</span>
+            </a>
+            <a href="/cancer_type/bladder">
+                <img src="{{ url_for('static', filename='logos/badder.jpg') }}" alt="Bladder Cancer">
+                <span>Bladder Cancer</span>
+            </a>
+            <a href="/cancer_type/colorectal">
+                <img src="{{ url_for('static', filename='logos/colorectal.jpg') }}" alt="Colorectal Cancer">
+                <span>Colorectal Cancer</span>
+            </a>
+            <a href="/cancer_type/esophageal">
+                <img src="{{ url_for('static', filename='logos/esophageal.jpg') }}" alt="Esophageal Cancer">
+                <span>Esophageal Cancer</span>
+            </a>
+            <a href="/cancer_type/gastric">
+                <img src="{{ url_for('static', filename='logos/gastric.png') }}" alt="Gastric Cancer">
+                <span>Gastric Cancer</span>
+            </a>
+            <a href="/cancer_type/head_and_neck">
+                <img src="{{ url_for('static', filename='logos/head_and_neck.jpg') }}" alt="Head and Neck Cancer">
+                <span>Head and Neck Cancer</span>
+            </a>
+            <a href="/cancer_type/hepatitis">
+                <img src="{{ url_for('static', filename='logos/hepathit_cancer.jpg') }}" alt="Hepatitis Cancer">
+                <span>Hepatitis Cancer</span>
+            </a>
+            <a href="/cancer_type/lung">
+                <img src="{{ url_for('static', filename='logos/lung_cancer.jpg') }}" alt="Lung Cancer">
+                <span>Lung Cancer</span>
+            </a>
+            <a href="/cancer_type/melanoma">
+                <img src="{{ url_for('static', filename='logos/melenoma_cancer.jpg') }}" alt="Melanoma Cancer">
+                <span>Melanoma Cancer</span>
+            </a>
+            <a href="/cancer_type/ovarian">
+                <img src="{{ url_for('static', filename='logos/ovarian.jpg') }}" alt="Ovarian Cancer">
+                <span>Ovarian Cancer</span>
+            </a>
+            <a href="/cancer_type/pancreas">
+                <img src="{{ url_for('static', filename='logos/pancreas_cancer.jpg') }}" alt="Pancreas Cancer">
+                <span>Pancreas Cancer</span>
+            </a>
+            <a href="/cancer_type/prostate">
+                <img src="{{ url_for('static', filename='logos/prostate.png') }}" alt="Prostate Cancer">
+                <span>Prostate Cancer</span>
+            </a>
+            <a href="/cancer_type/renal">
+                <img src="{{ url_for('static', filename='logos/renal_cancer.png') }}" alt="Renal Cancer">
+                <span>Renal Cancer</span>
+            </a>
+            <a href="/cancer_type/thyroid">
+                <img src="{{ url_for('static', filename='logos/thyroid.jpg') }}" alt="Thyroid Cancer">
+                <span>Thyroid Cancer</span>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact us: contact@oncoliganddb.com</p>
+    </footer>
+</body>
+</html>
+

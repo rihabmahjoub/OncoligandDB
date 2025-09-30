@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OncoligandDB - Liquid Cancers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="OncoligandDB Logo" class="logo">
+        <h1>Liquid Cancers</h1>
+    </header>
+
+    <main>
+        <h2>Select a cancer type</h2>
+        <div class="cancer-types">
+
+            <a href="/cancer_type/non_hodgkin_lymphoma">
+                <img src="{{ url_for('static', filename='logos/non_hodgkin_lymphoma.png') }}" alt="Non-Hodgkin Lymphoma">
+                <span>Non-Hodgkin Lymphoma</span>
+            </a>
+
+            <a href="/cancer_type/mds">
+                <img src="{{ url_for('static', filename='logos/mds.jpg') }}" alt="Myelodysplastic Syndromes (MDS)">
+                <span>Myelodysplastic Syndromes (MDS)</span>
+            </a>
+
+            <a href="/cancer_type/mm">
+                <img src="{{ url_for('static', filename='logos/mm.jpg') }}" alt="Multiple Myeloma">
+                <span>Multiple Myeloma (MM)</span>
+            </a>
+
+            <a href="/cancer_type/cml">
+                <img src="{{ url_for('static', filename='logos/cml.jpg') }}" alt="Chronic Myeloid Leukemia">
+                <span>Chronic Myeloid Leukemia (CML)</span>
+            </a>
+
+            <a href="/cancer_type/cll">
+                <img src="{{ url_for('static', filename='logos/cll.jpg') }}" alt="Chronic Lymphocytic Leukemia">
+                <span>Chronic Lymphocytic Leukemia (CLL)</span>
+            </a>
+
+            <a href="/cancer_type/aml">
+                <img src="{{ url_for('static', filename='logos/aml.png') }}" alt="Acute Myeloid Leukemia">
+                <span>Acute Myeloid Leukemia (AML)</span>
+            </a>
+
+            <a href="/cancer_type/all">
+                <img src="{{ url_for('static', filename='logos/all.jpg') }}" alt="Acute Lymphoblastic Leukemia">
+                <span>Acute Lymphoblastic Leukemia (ALL)</span>
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact us: contact@oncoliganddb.com</p>
+    </footer>
+</body>
+</html>
+

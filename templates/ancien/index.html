@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OncoligandDB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="OncoligandDB Logo" class="logo">
+        <h1>OncoligandDB</h1>
+    </header>
+    <main>
+        <h1>Welcome to OncoligandDB</h1>
+        <h2>Choose your interest:</h2>
+        <div class="options">
+            <a href="/solid_cancer">
+                <img src="{{ url_for('static', filename='logos/solid_cancer.png') }}" alt="Solid Cancer Logo">
+                <span>Solid Cancer</span>
+            </a>
+            <a href="/liquid_cancer">
+                <img src="{{ url_for('static', filename='logos/liquid_cancer.jpg') }}" alt="Liquid Cancer Logo">
+                <span>Liquid Cancer</span>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>Contact us: contact@oncoliganddb.com</p>
+    </footer>
+</body>
+</html>
+

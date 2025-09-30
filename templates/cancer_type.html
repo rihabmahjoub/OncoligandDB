@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ cancer_type }} Ligands</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ cancer_type }} Ligands</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ligand Name</th>
+                    <th>Year</th>
+                    <th>DrugBank</th>
+                    <th>ChEMBL</th>
+                    <th>Indication</th>
+                    <th>SMILES</th>
+                    <th>2D Image</th>
+                    <th>PDB Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ligand in data %}
+                {% set safe_name = ligand['Ligand_Name'].replace(' ', '_').replace('/', '_').replace('\\', '_') %}
+                <tr>
+                    <td>{{ ligand['Ligand_Name'] }}</td>
+                    <td>{{ ligand['Year'] }}</td>
+                    <td>
+                        {% if ligand['DrugBank'] %}
+                            <a href="https://go.drugbank.com/drugs/{{ ligand['DrugBank'] }}" target="_blank">
+                                {{ ligand['DrugBank'] }}
+                            </a>
+                        {% else %} N/A {% endif %}
+                    </td>
+                    <td>
+                        {% if ligand['ChEMBL'] %}
+                            <a href="https://www.ebi.ac.uk/chembl/compound_report_card/{{ ligand['ChEMBL'] }}/" target="_blank">
+                                {{ ligand['ChEMBL'] }}
+                            </a>
+                        {% else %} N/A {% endif %}
+                    </td>
+                    <td>{{ ligand['Indication'] }}</td>
+                    <td>{{ ligand['SMILES'] }}</td>
+                    <td>
+                        <img class="ligand-img"
+                             src="{{ url_for('static', filename='images/' + safe_name + '.png') }}"
+                             alt="2D structure of {{ ligand['Ligand_Name'] }}">
+                    </td>
+                    <td>
+                        {% if ligand.pdb_link %}
+                            <a href="{{ ligand.pdb_link }}">Download PDB</a>
+                        {% else %} N/A {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {% if total_pages > 1 %}
+        <div class="pagination">
+            {% if page > 1 %}
+                <a href="{{ url_for('cancer_type', cancer_type=cancer_type, page=page-1) }}">&laquo; Previous</a>
+            {% endif %}
+            {% for p in range(1, total_pages + 1) %}
+                {% if p == page %}
+                    <span class="active">{{ p }}</span>
+                {% else %}
+                    <a href="{{ url_for('cancer_type', cancer_type=cancer_type, page=p) }}">{{ p }}</a>
+                {% endif %}
+            {% endfor %}
+            {% if page < total_pages %}
+                <a href="{{ url_for('cancer_type', cancer_type=cancer_type, page=page+1) }}">Next &raquo;</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </main>
+</body>
+</html>
+

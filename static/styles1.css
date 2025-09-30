@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007BFF;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    width: 150px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #007BFF;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.options, .cancer-types {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.options a, .cancer-types a {
+    display: block;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+}
+
+.options img, .cancer-types img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.options span, .cancer-types span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
